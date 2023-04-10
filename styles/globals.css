@@ -112,3 +112,6 @@ body {
   }
 }
 
+.logoBg {
+  box-shadow: -7px -4px 0px #8ad6ff, inset -12px -9px 18px #d1ec93;
+}
