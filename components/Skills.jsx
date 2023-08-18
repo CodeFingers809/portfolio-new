@@ -2,18 +2,9 @@ import React from "react";
 import { Syne, Montserrat } from "next/font/google";
 import Image from "next/image";
 const syne = Syne({ weight: "variable", subsets: ["latin"] });
-const montserrat = Montserrat({ weight: "variable", subsets: ["latin"] });
 
 const Skills = () => {
   const imageArr = [
-    {
-      name: "Figma",
-      image: "/logos/figma.png",
-    },
-    {
-      name: "Canva",
-      image: "/logos/canva.png",
-    },
     {
       name: "NodeJS",
       image: "/logos/nodejs.png",
@@ -25,6 +16,10 @@ const Skills = () => {
     {
       name: "ReactJS",
       image: "/logos/reactjs.png",
+    },
+    {
+      name: "Python",
+      image: "/logos/python.png",
     },
     {
       name: "Sass",
@@ -42,10 +37,7 @@ const Skills = () => {
       name: "MongoDB",
       image: "/logos/mongodb.png",
     },
-    {
-      name: "Python",
-      image: "/logos/python.png",
-    },
+
     {
       name: "SKLearn",
       image: "/logos/sklearn.png",
@@ -53,6 +45,14 @@ const Skills = () => {
     {
       name: "GitHub",
       image: "/logos/github.png",
+    },
+    {
+      name: "Figma",
+      image: "/logos/figma.png",
+    },
+    {
+      name: "Canva",
+      image: "/logos/canva.png",
     },
   ];
   return (
@@ -79,6 +79,7 @@ const Skills = () => {
                   width={100}
                   alt={skill.name}
                   className="w-full h-auto"
+                  loading="lazy"
                 />
               </div>
               <p className={`${syne.className} font-extrabold text-3xl`}>

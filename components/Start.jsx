@@ -38,13 +38,13 @@ const Start = () => {
           <Link href="#about" onClick={(e) => handleLinkClick(e, "about")}>
             <span className="group circleInteract cursor-theme">
               About
-              <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-gray-800"></span>
+              <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-gray-800"></span>
             </span>
           </Link>
           <Link href="#skills" onClick={(e) => handleLinkClick(e, "skills")}>
             <span className="group circleInteract cursor-theme">
               Skills
-              <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-gray-800"></span>
+              <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-gray-800"></span>
             </span>
           </Link>
           <Link
@@ -53,7 +53,7 @@ const Start = () => {
           >
             <span className="group circleInteract cursor-theme">
               Projects
-              <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-gray-800"></span>
+              <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-gray-800"></span>
             </span>
           </Link>
           <Link href="#contact" onClick={(e) => handleLinkClick(e, "contact")}>
@@ -89,7 +89,7 @@ const Start = () => {
               onClick={(e) => handleLinkClick(e, "about")}
             >
               Let&apos;s Go{" "}
-              <ArrowSmallRightIcon class="h-[50px] w-[50px] text-gray-900" />
+              <ArrowSmallRightIcon className="h-[50px] w-[50px] text-gray-900" />
             </Link>
           </div>
         </div>

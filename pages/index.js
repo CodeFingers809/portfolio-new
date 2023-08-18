@@ -81,13 +81,26 @@ export default function Home() {
     <main className="bg-sky-300">
       <Head>
         <title>Ayush Bohra</title>
+        <meta name="title" content="Ayush Bohra" />
+        <meta
+          name="description"
+          content="Hey there! I am Ayush Bohra and this site is my personal portfolio. It includes all of my skills and projects."
+        />
+        <meta
+          name="keywords"
+          content="portfolio, personal portfolio, Ayush Bohra, skills, projects, contact, about me, about ayush, python, javascript, reactjs, nextjs, nodejs, sklearn, sass, tailwindcss, github"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="English" />
+        <meta name="author" content="Ayush Bohra" />
       </Head>
       <Follower />
       <button
         className="fixed z-[998] right-0 bottom-0 m-8 bg-orange-500 border-4 border-gray-800 rounded-full circleInteract hidden w-[70px] h-[70px] items-center justify-center"
         id="topBtn"
       >
-        <ArrowSmallUpIcon class="h-[60px] w-[60px] text-gray-900" />
+        <ArrowSmallUpIcon className="h-[60px] w-[60px] text-gray-900" />
       </button>
       <Start />
       <About />

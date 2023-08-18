@@ -6,9 +6,8 @@ import {
   ArrowSmallLeftIcon,
   ArrowSmallRightIcon,
   XMarkIcon,
-  ArrowTopRightOnSquareIcon
+  ArrowTopRightOnSquareIcon,
 } from "@heroicons/react/24/outline";
-import Image from "next/image";
 import Link from "next/link";
 
 const Projects = () => {
@@ -96,7 +95,7 @@ const Projects = () => {
           <div className="w-full h-12 border-b-4 border-b-gray-800 flex justify-between items-center">
             {/* x button */}
             <div className="h-full w-12 border-r-4 border-r-gray-800">
-              <XMarkIcon class="h-11 w-11 text-gray-900" />
+              <XMarkIcon className="h-11 w-11 text-gray-900" />
             </div>
             <span className={`${montserrat.className} text-2xl font-bold`}>
               Projects
@@ -135,7 +134,8 @@ const Projects = () => {
                   className={`${syne.className} text-3xl font-[750] cursor-theme circleInteract flex items-center`}
                   target="_blank"
                 >
-                  {projectList[projectNum].name}<ArrowTopRightOnSquareIcon className="w-6 h-6 ml-2"/>
+                  {projectList[projectNum].name}
+                  <ArrowTopRightOnSquareIcon className="w-6 h-6 ml-2" />
                 </Link>
                 <p className={`${montserrat.className} text-lg font-medium`}>
                   {projectList[projectNum].description}

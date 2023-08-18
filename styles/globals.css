@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+/* width */
+::-webkit-scrollbar {
+
+  width: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar * {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0c0c0c;
+  background-clip: content-box;
+  border: 5px solid transparent;
+  border-radius: 20px;
+}
+
 ::-moz-selection {
   background: #0c0c0c;
   color: white;
@@ -15,6 +34,7 @@
 html,
 body {
   width: 100%;
+  overflow: overlay;
   overflow-x: hidden;
 }
 body {
