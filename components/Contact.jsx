@@ -2,8 +2,34 @@ import React from "react";
 import { Syne, Montserrat } from "next/font/google";
 const syne = Syne({ weight: "variable", subsets: ["latin"] });
 const montserrat = Montserrat({ weight: "variable", subsets: ["latin"] });
-
+import { useState } from "react";
 const Contact = () => {
+  let [email, setEmail] = useState("");
+  let [name, setName] = useState("");
+  let [msg, setMsg] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("/api/mail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, name, message: msg }),
+      });
+
+      if (response.ok) {
+        console.log("Success");
+      } else {
+        console.error("Failed");
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <section
       className="h-screen w-full bg-indigo-400 flex flex-col"
@@ -19,35 +45,33 @@ const Contact = () => {
           <div className="p-14 pb-0">
             <input
               type="text"
-              name=""
-              id=""
               placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className={`p-auto px-8 border-4 border-gray-800 shadow-[7px_4px_0px_#0c0c0c] rounded-full w-full placeholder:text-3xl placeholder:text-gray-600 h-24 ${syne.className} placeholder:font-bold text-3xl text-gray-800 font-semibold`}
             />
           </div>
           <div className="p-14 pb-0">
             <input
               type="text"
-              name=""
-              id=""
-              placeholder="Phone No."
+              placeholder="Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               className={`p-auto px-8 border-4 border-gray-800 shadow-[7px_4px_0px_#0c0c0c] rounded-full w-full placeholder:text-3xl placeholder:text-gray-600 h-24 ${syne.className} placeholder:font-bold text-3xl text-gray-800 font-semibold`}
             />
           </div>
           <div className="p-14 pb-0">
             <textarea
-              name=""
-              id=""
               placeholder="Message"
+              value={msg}
+              onChange={(e) => setMsg(e.target.value)}
               className={`p-4 px-8 border-4 border-gray-800 shadow-[7px_4px_0px_#0c0c0c] rounded-[48px] w-full placeholder:text-3xl placeholder:text-gray-500 h-48 ${syne.className} placeholder:font-bold text-xl text-gray-800 font-semibold`}
             />
           </div>
           <div className="p-14 pb-0">
             <input
               type="submit"
-              name=""
-              id=""
-              placeholder="Message"
+              onClick={handleSubmit}
               className={`p-4 px-8 bg-[#95C623] border-4 border-gray-800 shadow-[7px_4px_0px_#0c0c0c] rounded-[48px] w-full h-20 ${syne.className} text-4xl text-gray-800 font-bold cursor-pointer circleInteract`}
             />
           </div>
